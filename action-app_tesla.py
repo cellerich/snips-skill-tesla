@@ -134,23 +134,23 @@ class Tesla_app(object):
     # --> Master callback function, triggered everytime an intent is recognized
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
-        if coming_intent == 'cellerich:tesla:car_name':
+        if coming_intent == 'cellerich:tesla_car_name':
             self.car_name(hermes, intent_message)
-        if coming_intent == 'cellerich:tesla:car_location':
+        if coming_intent == 'cellerich:tesla_car_location':
             self.car_location(hermes, intent_message)
-        if coming_intent == 'cellerich:tesla:car_odometer':
+        if coming_intent == 'cellerich:tesla_car_odometer':
             self.car_odometer(hermes, intent_message)
-        if coming_intent == 'cellerich:tesla:car_inside_temp':
+        if coming_intent == 'cellerich:tesla_car_inside_temp':
             self.car_inside_temp(hermes, intent_message)
-        if coming_intent == 'cellerich:tesla:car_outside_temp':
+        if coming_intent == 'cellerich:tesla_car_outside_temp':
             self.car_outside_temp(hermes, intent_message)
-        if coming_intent == 'cellerich:tesla:car_estimated_milage':
+        if coming_intent == 'cellerich:tesla_car_estimated_milage':
             self.car_estimated_milage(hermes, intent_message)
-        if coming_intent == 'cellerich:tesla:car_battery_level':
+        if coming_intent == 'cellerich:tesla_car_battery_level':
             self.car_battery_level(hermes, intent_message)
-        if coming_intent == 'cellerich:tesla:car_climate':
+        if coming_intent == 'cellerich:tesla_car_climate':
             self.car_climate(hermes, intent_message)
-        if coming_intent == 'cellerich:tesla:car_info':
+        if coming_intent == 'cellerich:tesla_car_info':
             self.car_info(hermes, intent_message)
 
 
