@@ -28,8 +28,12 @@ class Tesla_app(object):
         # get the configuration if needed
         try:
             self.config = SnipsConfigParser.read_configuration_file(CONFIG_INI)
+            print 'Config readed'
+            print self.config
+            print MQTT_ADDR
         except :
             self.config = None
+            print 'Error config'
 
         # start listening to MQTT
         self.start_blocking()
