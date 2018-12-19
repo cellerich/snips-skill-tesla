@@ -4,7 +4,7 @@
 from snipsTools import SnipsConfigParser
 from hermes_python.hermes import Hermes
 from hermes_python.ontology import *
-from tesla_api import TeslaApiClient
+# from tesla_api import TeslaApiClient
 
 import io
 import logging
