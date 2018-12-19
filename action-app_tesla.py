@@ -7,6 +7,7 @@ from hermes_python.ontology import *
 from tesla_api import TeslaApiClient
 
 import io
+import logging
 
 CONFIG_INI = "config.ini"
 
@@ -28,6 +29,7 @@ class Tesla_app(object):
         # get the configuration if needed
         try:
             self.config = SnipsConfigParser.read_configuration_file(CONFIG_INI)
+            logging.debug('read the config file')
             print 'Config readed'
             print self.config
             print MQTT_ADDR
@@ -139,6 +141,8 @@ class Tesla_app(object):
     def master_intent_callback(self,hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
         if coming_intent == 'cellerich:tesla_car_name':
+            self.car_name(hermes, intent_message)
+        if coming_intent == 'tesla_car_name':
             self.car_name(hermes, intent_message)
         if coming_intent == 'cellerich:tesla_car_location':
             self.car_location(hermes, intent_message)
