@@ -85,15 +85,50 @@ class Tesla_app(object):
         print '[Received] intent: {}'.format(intent_message.intent.intent_name)
 
 
-        # car_name
-        # car_location
-        # car_odometer
-        # car_inside_temp
-        # car_outside_temp
-        # car_estimated_milage
-        # car_battery_level
-        # car_climate
-        # car_info
+    #===car_outside_temp intent action ==========================================
+    def car_outside_temp(self, hermes, intent_message):
+        # terminate the session first if not continue
+        hermes.publish_end_session(intent_message.session_id, "")
+        
+        # action code goes here...
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+
+
+    #===car_estimated_milage intent action ==========================================
+    def car_estimated_milage(self, hermes, intent_message):
+        # terminate the session first if not continue
+        hermes.publish_end_session(intent_message.session_id, "")
+        
+        # action code goes here...
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+
+
+    #===car_battery_level intent action ==========================================
+    def car_battery_level(self, hermes, intent_message):
+        # terminate the session first if not continue
+        hermes.publish_end_session(intent_message.session_id, "")
+        
+        # action code goes here...
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+
+
+    #===car_climate intent action ==========================================
+    def car_climate(self, hermes, intent_message):
+        # terminate the session first if not continue
+        hermes.publish_end_session(intent_message.session_id, "")
+        
+        # action code goes here...
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+
+
+    #===car_info intent action ==========================================
+    def car_info(self, hermes, intent_message):
+        # terminate the session first if not continue
+        hermes.publish_end_session(intent_message.session_id, "")
+        
+        # action code goes here...
+        print '[Received] intent: {}'.format(intent_message.intent.intent_name)
+
 
 
     # --> Master callback function, triggered everytime an intent is recognized
